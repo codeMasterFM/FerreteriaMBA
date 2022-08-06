@@ -1,0 +1,83 @@
+﻿@using FerreteriaMBA.Models
+@model List<Codigo>
+<div class="contenedor">
+    <form asp-action="Add">
+        <div class="menu">
+            
+           <article class="buscador"> <label for="">Codigo de Factura: @ViewBag.codigo</label></article>
+           
+        <input type="text" name="codigo" class="buscador" placeholder="Codigo de producto">
+        <input type="number" name="cantidad" placeholder="cantidad" value="1" class="buscador">
+        <input type="submit" class="btnn" />
+        </div>
+        </form>
+        <div class="productos">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">cantidad</th>
+                    <th scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                    @{int contado = 1; }
+
+                    @foreach (var item in Model)
+                    {
+
+
+                        <tr>
+                        
+                            <th scope="row">@contado</th>
+                            <td>@item.IdProductoNavigation.Nombre</td>
+                            <td>@item.Cantidad</td>
+                            <td>@item.IdProductoNavigation.Precio</td>
+                           <label> @{contado++;}
+                        </tr>
+                    }
+                
+                    </tbody>
+                  </table>
+                  <label class="total">
+                TOTAL: 
+                @ViewBag.Total
+            </label>
+           
+            </div>
+             <button id="Imprimir">Imprimir</button>
+        </div>
+
+  <script>
+       
+let Imprimir = document.getElementById('Imprimir');
+let btnInprimer = document.querySelector('.action-button');
+console.log(btnInprimer);
+
+//console.log(Imprimir);
+
+let content = document.querySelector('.productos').innerHTML;
+
+
+Imprimir.onclick = () => {
+
+     window.document.write(content);
+    const head = document.getElementsByTagName("head")[0];
+    console.log(head)
+     setTimeout(()=>{
+     window.print();
+    },500)
+   
+
+}
+
+btnInprimer.onclick = () => {
+
+    console.log("kdlskds");
+
+}
+
+
+    </script>

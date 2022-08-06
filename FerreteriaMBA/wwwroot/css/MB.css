@@ -1,0 +1,78 @@
+.contenedor{
+    margin: 0 auto;
+    height: 500px;
+    width: 75%;
+    background-color: #222831c3;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 5px;
+}
+.menu{
+
+ padding: 10px;
+   background-color: #dddddd70;
+   display: flex;
+justify-content: space-between;
+
+    
+}
+
+.buscador{
+display: flex;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 20px;
+justify-content: space-between;
+gap:10px;
+color:black;
+margin-left:5px;
+margin-right:5px;
+
+
+}
+.productos{
+    background-color: #ffffffdc;
+    margin: 5px;
+    height: 85%;
+    overflow:scroll;
+ 
+}
+
+.foter{
+ 
+ 
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: end;
+}
+input{
+
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: rgba(0, 255, 255, 0.138);
+
+}
+.number{
+   
+    width: 70px;
+    
+}
+.btnn{
+    width:70px;
+    border-color: rgba(0, 114, 76, 0.729);
+    border-radius: 10px;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.total{
+    float: right;
+    color: forestgreen;
+    font-size:25px;
+    margin-right:20px;
+}
